@@ -12,4 +12,9 @@ public class StringElementWithLabel extends ElementWithLabel<String> {
     public StringElementWithLabel(String value, Label label) {
         super(value, label);
     }
+
+    @Override
+    public String getValueAsString() {
+        return this.value;
+    }
 }

@@ -7,8 +7,8 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType
 @XmlEnum(String.class)
 public enum Label {
-    @XmlEnumValue("NEW")
+
     NEW,
-    @XmlEnumValue("OLD")
+
     OLD;
 }

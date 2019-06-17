@@ -3,13 +3,13 @@ package com.codechimp.test.jaxb.model;
 import javax.xml.bind.annotation.*;
 
 @XmlSeeAlso({StringElementWithLabel.class})
-@XmlAccessorType(XmlAccessType.FIELD)
+@XmlAccessorType(XmlAccessType.NONE)
 public abstract class ElementWithLabel<T> {
 
     @XmlAttribute(name="label")
-    private Label label;
-    @XmlValue
-    private T value;
+    protected Label label;
+    @XmlTransient
+    protected T value;
 
     public ElementWithLabel() {
         this(null);
@@ -24,12 +24,15 @@ public abstract class ElementWithLabel<T> {
         this.value = value;
     }
 
-    public Label getLabel() {
-        return label;
-    }
+    @XmlValue
+    public abstract String getValueAsString();
 
     public String getLabelAsString() {
         return label.name();
+    }
+
+    public Label getLabel() {
+        return label;
     }
 
     public void setLabel(Label label) {
