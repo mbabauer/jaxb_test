@@ -2,7 +2,7 @@ package com.codechimp.test.jaxb.model;
 
 import javax.xml.bind.annotation.*;
 
-@XmlSeeAlso({StringElementWithLabel.class})
+@XmlSeeAlso({StringElementWithStringLabel.class})
 @XmlAccessorType(XmlAccessType.FIELD)
 public abstract class ElementWithStringLabel<T> {
 
